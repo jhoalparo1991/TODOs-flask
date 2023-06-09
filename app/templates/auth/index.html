@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block title %} {{super()}} Login {% endblock %}
+{% block content %}
+<div class="container mt-4 p-4">
+    <div class="row">
+        <div class="col-md-4 col-sm-12 offset-4">
+            <div class="card rounded-3">
+                <div class="card-header">
+                    <p class="fs-1 fw-bold">Signin</p>
+                </div>
+                <div class="card-body">
+                    {{render_form(login_form,button_style='success',action='login')}}
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

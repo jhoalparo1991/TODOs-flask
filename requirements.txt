@@ -1,3 +1,6 @@
 flask
 bootstrap-flask
-flask-wtf
+autopep8
+flask-testing
+Flask-WTF
+bootstrap-flask
