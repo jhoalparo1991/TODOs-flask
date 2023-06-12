@@ -1,4 +1,4 @@
-from ..forms import LoginForm
+from ..forms import LoginForm, SignupForm
 from . import auth
 from flask import render_template,session
 
@@ -21,4 +21,12 @@ def login():
     
     
     return render_template('auth/index.html',**context)
+
+
+@auth.route('/signup', methods=['GET','POST'])
+def signup():
+    context = {
+        'signup_form' : SignupForm
+    }
+    return render_template('auth/signup.html', **context)
 
